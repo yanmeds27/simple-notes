@@ -77,16 +77,43 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Vértice Gestão Estratégica | Consultoria de Governança e Rentabilidade para PMEs" },
+      {
+        name: "description",
+        content:
+          "Consultoria tática hands-on para proprietários, CEOs e gestores de pequenas e médias empresas. Otimize margem EBITDA, estruture processos autônomos e prepare seu negócio para crescer.",
+      },
+      { name: "author", content: "Vértice Gestão Estratégica" },
+      { property: "og:title", content: "Vértice Gestão Estratégica | Consultoria B2B para PMEs" },
+      {
+        property: "og:description",
+        content:
+          "Metodologia tática hands-on para PMEs: processos escaláveis, governança e alavancagem de rentabilidade sem sobrecarregar o fundador.",
+      },
       { property: "og:type", content: "website" },
+      { property: "og:locale", content: "pt_BR" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Vértice Gestão Estratégica | Consultoria B2B para PMEs" },
+      {
+        name: "twitter:description",
+        content:
+          "Escale a rentabilidade e a eficiência da sua empresa com consultoria executiva de sócios seniores.",
+      },
     ],
     links: [
+      {
+        rel: "preconnect",
+        href: "https://fonts.googleapis.com",
+      },
+      {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossOrigin: "anonymous",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap",
+      },
       {
         rel: "stylesheet",
         href: appCss,
@@ -102,11 +129,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR" className="dark scroll-smooth">
       <head>
         <HeadContent />
       </head>
-      <body>
+      <body className="min-h-screen bg-background text-foreground antialiased selection:bg-amber-500/20 selection:text-amber-200">
         {children}
         <Scripts />
       </body>
